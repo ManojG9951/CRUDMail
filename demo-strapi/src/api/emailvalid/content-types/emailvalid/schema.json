@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "emailvalids",
+  "info": {
+    "singularName": "emailvalid",
+    "pluralName": "emailvalids",
+    "displayName": "emailvalid",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "serialnum": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "event_list": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event-list.event-list",
+      "inversedBy": "emailvalids"
+    }
+  }
+}
